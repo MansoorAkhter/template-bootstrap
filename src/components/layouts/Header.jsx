@@ -21,6 +21,7 @@ const Header = () => {
             <Nav.Link as={Link} to="/cart">Shop</Nav.Link>
             <Nav.Link as={Link} to="/cart">Blog</Nav.Link>
             <Nav.Link as={Link} to="/cart">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/cart"><i className="bi bi-bag fs-5s"></i> <em className="roundpoint">2</em></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
