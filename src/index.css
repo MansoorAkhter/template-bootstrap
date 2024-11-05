@@ -97,7 +97,7 @@ a {
 .order_now:focus {
   color: var(--white);
   background: transparent;
-  background-color: var(--white);
+  border-color:var(--white);
 }
 .btn_red {
   color: var(--white);
