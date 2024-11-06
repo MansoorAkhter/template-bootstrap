@@ -1,21 +1,37 @@
-import React from "react";
+import { Col, Card, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const Card = ({ title, icon }) => {
+const Cards = ({ title, image, price, rating, paragraph, renderRatingIcons }) => {
   return (
-    <div className="card" style={{ width: '18rem' }}>
-      <div className="card-body">
-        <h5 className="card-title">
-          <i className={icon}></i> {title}
-        </h5>
-        <p className="card-text">
-          Ye aapka custom card hai. Yahan aap additional content daal sakte hain.
-        </p>
-        <a href="#" className="btn btn-primary">
-          Action
-        </a>
-      </div>
-    </div>
+    <Col sm={6} lg={4} xl={3} className="mb-4">
+      <Card className="overflow-hidden">
+        <div className="overflow-hidden">
+          <Card.Img variant="top" src={image} />
+        </div>
+        <Card.Body>
+          <div className="d-flex align-items-center justify-content-between">
+            <div className="item_rating">{renderRatingIcons(rating)}</div>
+            <div className="wishlist">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{paragraph}</Card.Text>
+          <div className="d-flex align-items-center justify-content-between">
+            <div className="menu_price">
+              <h5 className="mb-0">${price}</h5>
+            </div>
+            <div className="add_to_cart">
+              <Link to="/">
+                <i class="bi bi-bag me-2"></i>
+                Add To Cart
+              </Link>
+            </div>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 
-export default Card;
+export default Cards;

@@ -36,6 +36,7 @@ html {
 }
 
 @media (max-width: 992px) {
+
   body,
   html {
     font-size: 0.875rem;
@@ -73,9 +74,11 @@ a {
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--yellow);
 }
@@ -93,20 +96,23 @@ a {
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
+
 .order_now:hover,
 .order_now:focus {
   color: var(--white);
   background: transparent;
-  border-color:var(--white);
+  border-color: var(--white);
 }
+
 .btn_red {
   color: var(--white);
   background: var(--light-red);
-  background-color: var(--light-red);
+  border-color: var(--light-red);
 }
+
 .btn_red:hover,
 .btn_red:focus {
   color: var(--light-red);
   background: transparent;
-  background-color: var(--light-red);
+  border-color: var(--light-red);
 }
